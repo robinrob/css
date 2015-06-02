@@ -22,10 +22,6 @@
   path = force.com
   url = git@bitbucket.org:robinrob/force.com.git
   branch = master
-[submodule "html-css"]
-  path = html-css
-  url = git@github.com:robinrob/html-css.git
-  branch = master
 [submodule "java"]
   path = java
   url = git@github.com:robinrob/java.git
@@ -48,6 +44,9 @@
   path = python
   url = git@github.com:robinrob/python.git
   branch = master
+[submodule "res"]
+  path = res
+  url = git@github.com:robinrob/res.git
 [submodule "ruby"]
   path = ruby
   url = git@github.com:robinrob/ruby.git
@@ -66,6 +65,6 @@
   path = zsh
   url = git@github.com:robinrob/zsh.git
   branch = master
-[submodule "res"]
-	path = res
-	url = git@github.com:robinrob/res.git
+[submodule "html5"]
+	path = html5
+	url = git@github.com:robinrob/html5.git
