@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>float</title>
+
+  <style type='text/css'>
+    /* The effect of this box-sizing property means that padding/borders are INCLUDED within width of elements. */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* 'main' just has to be at least as wide as 'left' and 'right' (including borders!)*/
+    .main {
+      width: 840px;
+      margin: 0 auto;
+      border: 20px solid red;
+    }
+
+    .left {
+      width: 400px;
+      float: left;
+      border: 20px solid green;
+    }
+
+    .right {
+      width: 400px;
+      float: right;
+      border: 20px solid yellow;;
+    }
+
+    /* The 'clearfloat' class is added to anything that collapses due to floating child elements. */
+    .cf:before, .cf:after {
+      content: " ";
+      display: table;
+    }
+
+    .cf:after {
+      clear: both;
+    }
+
+    .cf {
+      *zoom: 1; /* for IE6 and IE7 */
+    }
+  </style>
+
+
+</head>
+<body>
+
+<!-- Class 'cf' is added to 'main' div to prevent itself collapsing. -->
+<div class="main cf">
+  <div class="left">Left Div</div>
+
+  <div class="right">Right Div</div>
+</div>
+<div class="main cf">
+  <div class="left">Left Div</div>
+
+  <div class="right">Right Div</div>
+</div>
+
+</body>
+</html>

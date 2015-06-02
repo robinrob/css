@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested_cols</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type='text/css'>
+        .col-md-6 {
+            background-color: yellow;
+        }
+
+        .col1 {
+            background-color: orange;
+        }
+
+        .col2 {
+            background-color: red;
+        }
+
+        .col3 {
+            background-color: cyan;
+        }
+
+        .col4 {
+            background-color: magenta;
+        }
+
+        .col5 {
+            background-color: greenyellow;
+        }
+
+        .col6 {
+            background-color: purple;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Row -->
+    <div class="row">
+        <div class="col-md-6 col1">
+            <h3>Column 1</h3>
+
+            <!-- Row -->
+            <div class="row">
+                <div class="col-md-6 col3">
+                    <h3>Column 3</h3>
+
+                    <!-- Row -->
+                    <div class="row">
+                        <div class="col-md-6 col5">
+                            <h3>Column 5</h3>
+                        </div>
+                        <div class="col-md-6 col6">
+                            <h3>Column 6</h3>
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                </div>
+                <div class="col-md-6 col4">
+                    <h3>Column 4</h3>
+                </div>
+            </div>
+            <!-- End -->
+
+        </div>
+        <div class="col-md-6 col2">
+            <h3>Column 2</h3>
+        </div>
+    </div>
+    <!-- End -->
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

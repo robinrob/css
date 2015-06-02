@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style type='text/css'>
+    #box {
+      width:100px; height:100px;
+      direction: rtl;
+    }
+
+    .fat-padding {
+      padding: 50px 50px 50px 50px;
+    }
+
+    .fat-border {
+      /* This is interesting: with the compact 'border' property commented out
+      and the last 2 lines un-commented, the order of last 2 lines affects
+      width of border */
+
+      /* Border is correct width */
+      /*border: 5px solid red;*/
+
+      border: 5px dashed orange;
+
+      /* Border is weirdly too thin */
+      /*border-width:5px 5px 5px 5px;*/
+      /*border: solid red;*/
+    }
+
+    .fat-margin {
+      margin: 50px 50px 50px 50px;
+    }
+  </style>
+
+</head>
+<body>
+
+<table>
+    <tr>
+      <td><div id="box" class="fat-margin fat-padding fat-border"></div></td>
+    </tr>
+</table>
+
+</body>
+</html>

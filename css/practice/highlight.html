@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Highlight</title>
+
+  <script type='text/javascript' src='http://code.jquery.com/jquery-git2.js'></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  <style type='text/css'>
+    #back-box {
+      width:600px; height:520px;
+      background-color: #ccae8f;
+      margin-top: 100px;
+    }
+
+    #back-box-text {
+      margin-left: 40px;
+      margin-right: 40px;
+      top: 2em;
+      vertical-align: bottom;
+      position: relative;
+      color: #5b4933;
+    }
+
+    span {
+      display: inline;
+      background-color: #c06808;
+      /*padding-left: 0.15em;*/
+      /*padding-right: 0.15em;*/
+      margin-right: -0.15em;
+      margin-left: -0.15em;
+      border-style: solid;
+      border-color: #c06808;
+      border-width: 0 0.15em 0 0.15em;
+    }
+
+    .highlight {
+      display: inline;
+      background-color: #c06808;
+      /*padding-left: 0.15em;*/
+      /*padding-right: 0.15em;*/
+      margin-right: -0.15em;
+      margin-left: -0.15em;
+      border-style: solid;
+      border-color: #c06808;
+      border-width: 0 0.15em 0 0.15em;
+    }
+
+    /*span:before, span:after {*/
+      /*content: "";*/
+      /*display: inline-block;*/
+      /*position: relative;*/
+      /*width: 0.1em;*/
+      /*background-color: #c06808;*/
+    /*}*/
+
+    #title-box {
+      width:530px; height:110px;
+      background-color: #5b4933;
+      vertical-align: top;
+      position: relative;
+      top: 30px;
+      color: white;
+      text-align: center;
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      font-size: 35px;
+    }
+
+    .fixed {
+      /*z-index: 0;*/
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+<div id="back-box" class="center">
+  <div id="title-box" class="center">
+    <p>This is a block-level element</p>
+  </div>
+  <!-- span vs. p -->
+  <p id="back-box-text" class="center fixed"><span>The rectangle that appears behind the word inline in this paragraph is an inline-level element.</span></p>
+
+  <!-- Using just p instead: -->
+  <p id="back-box-text" class="center fixed highlight">The rectangle that appears behind the word inline in this paragraph is an inline-level element.</span></p>
+</div>
+
+</body>
+
+
+</html>

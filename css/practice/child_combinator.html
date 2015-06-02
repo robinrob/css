@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Child Combinator</title>
+
+  <style type='text/css'>
+    * {
+      border: 20px solid red;
+    }
+		#container > .box {
+      font-style: italic;
+		}
+  </style>
+
+
+</head>
+<body>
+
+  <!--The 'box' has to be an immediate descendant of the 'container'.-->
+  <div id="container">
+    Container:
+    <div class="box">
+      First div (box) - styles apply here!
+      <div>Inner div of first div - styles still apply because i am contained within first child of Container!</div>
+    </div>
+
+    <div>Second div - styles do not apply to successive children!</div>
+  </div>
+</body>
+</html>

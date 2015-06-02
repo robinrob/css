@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Hue/Saturation/Lightness</title>
+
+  <!-- Demonstration of using HSL format for colors. Also demonstrates use of 'inherit' keyword value for
+  properties. -->
+  <style type='text/css'>
+    * {
+      padding: 20px;
+      /* Both of these produce white: */
+      color: hsl(28, 37%, 100%);
+      background-color: hsl(156, 40%, 100%);
+    }
+
+    .black1 {
+      background-color: hsl(245, 63%, 0%);
+    }
+
+    .black2 {
+      background-color: hsl(59, 20%, 0%);
+    }
+
+    p {
+      color: hsl(10, 50%, 70%);
+      font-size: 20px;
+      font-weight: bold;
+      background-color: inherit;
+    }
+  </style>
+
+
+</head>
+<body class="black1">
+
+<div class="white">
+  <div class="black2">
+    <p>What color am i?</p>
+  </div>
+</div>
+
+</body>
+</html>

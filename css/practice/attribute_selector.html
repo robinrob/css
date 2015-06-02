@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Attribute Selector</title>
+
+  <style type='text/css'>
+    input[type="text"] {
+      background-color: #444;
+      width: 400px;
+      height: 30px;
+      color: white;
+      font-size: 20px;
+      padding-left:0.5em;
+    }
+
+    input[type="submit"] {
+      background-color: #ebebeb;
+      width: 100px;
+      height: 30px;
+      color: #444;
+      text-shadow: 1px 1px grey;
+      font-size: 20px;
+      padding-left:0.5em;
+    }
+  </style>
+
+  <script>
+    function submitted(e) {
+      alert(e.textfield.value)
+    }
+  </script>
+
+</head>
+<body>
+
+<form method="post" onsubmit="submitted(this)">
+  <input type="text" name="textfield" value="Hello Robin!" />
+  <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

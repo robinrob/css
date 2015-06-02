@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Transition</title>
+
+  <style type='text/css'>
+      .box {
+          width: 200px;
+          height: 200px;
+          text-align: center;
+          display: inline-block;
+
+      }
+
+      a {
+          position: relative;
+          top: 90px;
+          font-size: 20px;
+      }
+
+      /* Specify single transition. */
+      .box1 {
+          background-color: black;
+
+          /* When transition is defined on element, transition occurs on hover-off as well as hover-on.*/
+          transition: background-color 1s ease-out;
+          /* Equivalent to this: */
+          /*transition-property: background-color;*/
+          /*transition-duration: .4s;*/
+          /*transition-timing-function: ease-out;*/
+          /*transition-delay: 0s;*/
+      }
+
+      .box1:hover {
+          background-color: #ffff00;
+      }
+
+      .box1 a {
+          color: #ffff00;
+      }
+
+      .box1 a:hover {
+          text-decoration: none;
+          color: #000000;
+      }
+
+      /* Perform multiple transitions using 'all' keyword value. */
+      .box2 {
+          background-color: blue;
+          color: #ffff00;
+          transition: all 1s ease-out;
+      }
+
+      .box2:hover {
+          width: 220px;
+          height: 220px;
+          background-color: magenta;
+          color: blue;
+      }
+
+      /* Explicitly specify multiple transitions. */
+      .box3 {
+          transition: color .4s ease-out, width .7s linear, background-color .4s ease-out;
+      }
+
+      .box3:hover {
+          color: white;
+          width: 300px;
+          background-color: black;
+      }
+
+  </style>
+
+
+</head>
+<body>
+
+<div class="box box1"><a>Box 1</a></div>
+<div class="box box2"><a>Box 2</a></div>
+<div class="box box3"><a>Box 3</a></div>
+
+</body>
+</html>

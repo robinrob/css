@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type='text/css'>
+        .container {
+            margin-top: 100px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <button type="button" class="btn btn-default tooltipButton" data-toggle="tooltip" data-placement="bottom" title="I am a Bootstrap button">Who am I?</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.tooltipButton').tooltip();
+    });
+
+//    var options = {
+//        animation : true;
+//    };
+//
+//    $(".tooltipButton").tooltip(options);
+
+//    $('.tooltipButton').tooltip('show');
+
+    $('.tooltipButton').on('show.bs.tooltip', function () {
+        console.log("Showing tooltip..");
+    });
+
+    $('.tooltipButton').on('shown.bs.tooltip', function () {
+        console.log("Tooltip shown.");
+    });
+
+    $('.tooltipButton').on('hide.bs.tooltip', function () {
+        console.log("Hiding tooltip..");
+    });
+
+    $('.tooltipButton').on('hidden.bs.tooltip', function () {
+        console.log("Tooltip hidden.");
+    });
+
+</script>
+</body>
+</html>
