@@ -15,9 +15,6 @@
 [submodule "coq"]
   path = coq
   url = git@github.com:robinrob/coq.git
-[submodule "docs"]
-  path = docs
-  url = git@bitbucket.org:robinrob/docs.git
 [submodule "force.com"]
   path = force.com
   url = git@bitbucket.org:robinrob/force.com.git
@@ -68,3 +65,6 @@
   path = zsh
   url = git@github.com:robinrob/zsh.git
   branch = master
+[submodule "css"]
+	path = css
+	url = git@github.com:robinrob/css.git
