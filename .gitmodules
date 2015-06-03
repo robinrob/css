@@ -1,0 +1,70 @@
+[submodule "awk"]
+  path = awk
+  url = git@github.com:robinrob/awk.git
+[submodule "c"]
+  path = c
+  url = git@github.com:robinrob/c.git
+  branch = master
+[submodule "c-plus-plus"]
+  path = c-plus-plus
+  url = git@github.com:robinrob/c-plus-plus.git
+  branch = master
+[submodule "coffeescript"]
+  path = coffeescript
+  url = git@github.com:robinrob/coffeescript.git
+[submodule "coq"]
+  path = coq
+  url = git@github.com:robinrob/coq.git
+[submodule "force.com"]
+  path = force.com
+  url = git@bitbucket.org:robinrob/force.com.git
+  branch = master
+[submodule "html5"]
+  path = html5
+  url = git@github.com:robinrob/html5.git
+[submodule "java"]
+  path = java
+  url = git@github.com:robinrob/java.git
+  branch = master
+[submodule "javascript"]
+  path = javascript
+  url = git@github.com:robinrob/javascript.git
+  branch = master
+[submodule "markdown"]
+  path = markdown
+  url = git@github.com:robinrob/markdown.git
+[submodule "ocaml"]
+  path = ocaml
+  url = git@github.com:robinrob/ocaml.git
+[submodule "perl"]
+  path = perl
+  url = git@github.com:robinrob/perl.git
+  branch = master
+[submodule "python"]
+  path = python
+  url = git@github.com:robinrob/python.git
+  branch = master
+[submodule "res"]
+  path = res
+  url = git@github.com:robinrob/res.git
+[submodule "ruby"]
+  path = ruby
+  url = git@github.com:robinrob/ruby.git
+  branch = master
+[submodule "scala"]
+  path = scala
+  url = git@github.com:robinrob/scala.git
+[submodule "sh"]
+  path = sh
+  url = git@github.com:robinrob/sh.git
+  branch = master
+[submodule "unity"]
+  path = unity
+  url = git@github.com:robinrob/unity.git
+[submodule "zsh"]
+  path = zsh
+  url = git@github.com:robinrob/zsh.git
+  branch = master
+[submodule "css"]
+	path = css
+	url = git@github.com:robinrob/css.git
