@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Precedence</title>
+
+  <style type='text/css'>
+
+    /* Order of rule declarations is superseded by level of specificity - more specific rules take precedence. */
+    div p {
+      color: blue;
+    }
+
+    p {
+      color: red;
+    }
+
+    /* Styles 'cascade' - for rules/blocks of equal specificity, later declarations take precedence. */
+    p {
+      color: green;
+    }
+
+    div, p {
+      font-weight: bold;
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+<div>
+  This is a div.
+  <p>This is a p inside of a div.</p>
+</div>
+
+<p>This is a stand-alone p.</p>
+
+</body>
+</html>

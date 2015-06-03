@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reorder_cols</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type='text/css'>
+        .col1 {
+            background-color: yellow;
+        }
+
+        .col2 {
+            background-color: cyan;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-9 col1">
+            <h1>Normal column</h1>
+        </div>
+        <div class="col-xs-3 col2">
+            <h1>Normal column</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-9 col-xs-push-3 col1">
+            <h1>Pushed Column</h1>
+        </div>
+        <div class="col-xs-3 col-xs-pull-9 col2">
+            <h1>Pulled Column</h1>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

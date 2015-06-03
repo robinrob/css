@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advanced_forms</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type='text/css'>
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>Advanced Forms</h1>
+    </div>
+
+
+    <div class="form">
+
+        <!-- Bootstrap 'helper class' allows you to 'disable' an input form element-->
+        <div class="form-group">
+            <label for="descField" class="col-xs-2">Description</label>
+            <div class="col-xs-10">
+                <input id="descField" class="form-control" type="text" placeholder="This input field is disabled" disabled>
+            </div>
+        </div>
+
+        <!--Applying has-success will make the label text and border field green in color.
+        Similarly, has-warning will employ a dull brown color and has-danger will use dark red.
+        These has-* type classes will only apply colors to form-control, control-label,
+        and help-block classed elements.
+
+        If you want to show some custom text when a user enters invalid values in the
+        input field, use a span element with class help-block. The help-block will appear below its corresponding input
+        field when invalid values are entered.-->
+        <div class="form-group has-success">
+            <label for="descField" class="control-label col-xs-2">Input with success</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" id="inputField">
+            </div>
+        </div>
+
+        <div class="form-group has-error">
+            <label for="descField" class="control-label col-xs-2">Input with success</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" id="inputField">
+                <span class="help-block">Value must be entered!</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

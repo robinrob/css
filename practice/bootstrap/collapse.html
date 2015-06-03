@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collapse</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type='text/css'>
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="panel-group" id="accordion">
+
+        <!-- Panel 1 -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        Collapsible Group Item #1
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur ...
+                </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur ...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+//    $('.collapse').collapse({
+//        toggle: false
+//    });
+
+    $('.collapse').on('show.bs.collapse', function () {
+        console.log('Opening tab..');
+    });
+
+    $('.collapse').on('shown.bs.collapse', function () {
+        console.log('Tab opened.');
+    });
+
+    $('.collapse').on('hide.bs.collapse', function () {
+        console.log('Hiding tab..');
+    });
+
+    $('.collapse').on('hidden.bs.collapse', function () {
+        console.log('Tab hidden');
+    });
+</script>
+</body>
+</html>

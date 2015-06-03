@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollspy</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type="text/css">
+        .scrollspy-example {
+            position: relative;
+            height: 200px;
+            margin-top: 10px;
+            overflow: auto
+        }
+
+        .width {
+            width: 450px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <nav id="navbarExample" class="navbar navbar-default width" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button"
+                ↵data-toggle="collapse" data-target=".navbarLinks">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SitePoint</a>
+            </div>
+            <div class="collapse navbar-collapse navbarLinks">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li class=""><a href="#about">About</a></li>
+                    <li class=""><a href="#contact">Contact Us</a></li>
+                    <li class=""><a href="#map">Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example width">
+
+        <h4 id="Home">Home</h4>
+
+        <p>All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+        </p>
+
+        <h4 id="about">About</h4>
+
+        <p>All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+        </p>
+
+        <h4 id="contact">Contact Us</h4>
+
+        <p>All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+        </p>
+
+        <h4 id="map">Map</h4>
+
+        <p>All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+            All scroll and no stop makes Robin a very interesting boy.
+        </p>
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    $('.scrollspy-example').scrollspy({ target: '#navbarExample' });
+
+    $('.scrollspy-example').scrollspy("refresh");
+
+    $('#navbarExample').on('activate.bs.scrollspy', function () {
+        console.log("New link highlighted!");
+    });
+</script>
+
+</body>
+</html>
