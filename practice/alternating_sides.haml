@@ -10,35 +10,66 @@
         margin-left: 100px;
       }
 
+      .row {
+        width: 70%;
+      }
+
       .main {
-        background-color: red;
+        background-color: blue;
       }
 
-      .main:nth-child(even) {
+      .main > .row:nth-child(odd) {
         background-color: yellow;
+        float: left;
       }
 
-      .main:nth-child(odd) {
+      .main > .row:nth-child(even) {
         background-color: red;
+        float: right;
       }
 
 
   %body
     .main
-      %div
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-      %div
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
+      .row
+        %ul
+          %li
+            WANKER
+          %li
+            WANKER
+          %li
+            WANKER
+          %li
+            WANKER
+          %li
+            WANKER
+      .row
+        %ul
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+
+      .row
+        %ul
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+

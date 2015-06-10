@@ -10,39 +10,89 @@
         margin-left: 100px;
       }
       
+      .row {
+        width: 70%;
+      }
+      
       .main {
-        background-color: red;
+        background-color: blue;
       }
       
-      .main:nth-child(even) {
+      .main > .row:nth-child(odd) {
         background-color: yellow;
+        float: left;
       }
       
-      .main:nth-child(odd) {
+      .main > .row:nth-child(even) {
         background-color: red;
+        float: right;
       }
     </style>
   </head>
   <body>
     <div class='main'>
-      <div>
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
-        WANKER
+      <div class='row'>
+        <ul>
+          <li>
+            WANKER
+          </li>
+          <li>
+            WANKER
+          </li>
+          <li>
+            WANKER
+          </li>
+          <li>
+            WANKER
+          </li>
+          <li>
+            WANKER
+          </li>
+        </ul>
       </div>
-      <div>
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
-        TOSSER
+      <div class='row'>
+        <ul>
+          <li>
+            TOSSER
+          </li>
+          <li>
+            TOSSER
+          </li>
+          <li>
+            TOSSER
+          </li>
+          <li>
+            TOSSER
+          </li>
+          <li>
+            TOSSER
+          </li>
+          <li>
+            TOSSER
+          </li>
+        </ul>
+      </div>
+      <div class='row'>
+        <ul>
+          <li>
+            PRICK
+          </li>
+          <li>
+            PRICK
+          </li>
+          <li>
+            PRICK
+          </li>
+          <li>
+            PRICK
+          </li>
+          <li>
+            PRICK
+          </li>
+          <li>
+            PRICK
+          </li>
+        </ul>
       </div>
     </div>
   </body>
