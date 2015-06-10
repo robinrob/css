@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Hue/Saturation/Lightness
+    /
+      Demonstration of using HSL format for colors. Also demonstrates use of 'inherit' keyword value for
+      properties.
+    :css
+      * {
+        padding: 20px;
+        /* Both of these produce white: */
+        color: hsl(28, 37%, 100%);
+        background-color: hsl(156, 40%, 100%);
+      }
+
+      .black1 {
+        background-color: hsl(245, 63%, 0%);
+      }
+
+      .black2 {
+        background-color: hsl(59, 20%, 0%);
+      }
+
+      p {
+        color: hsl(10, 50%, 70%);
+        font-size: 20px;
+        font-weight: bold;
+        background-color: inherit;
+        /* Last property of RGBA format specifies opacity: */
+        background-color: rgba(255, 0, 255, 0.5);
+      }
+  %body.black1
+    .white
+      .black2
+        %p What color am i?

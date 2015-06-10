@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Small Caps
+    :css
+      p span {
+        font-variant: small-caps;
+      }
+  %body
+    %p
+      For more typographic sophistication, you can also turn to the font-variant
+      property, which lets you set type as small-caps. In small cap style,
+      lowercase letters appear as slightly downsized capital letters, like so:
+      %span pomp
+      and
+      = succeed "." do
+        %span circumstance

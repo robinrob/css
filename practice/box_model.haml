@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    :css
+      #box {
+        width:100px;
+        height:100px;
+        direction: rtl;
+      }
+
+      .fat-padding {
+        padding: 50px 50px 50px 50px;
+      }
+
+      .fat-border {
+        border: solid red;
+        border-width:5px 5px 5px 5px;
+      }
+
+      .fat-margin {
+        margin: 50px 50px 50px 50px;
+      }
+  %body
+    %table
+      %tr
+        %td
+          #box.fat-margin.fat-border.fat-padding hello
+        %td
+          #box.fat-margin.fat-border.fat-padding
+      %tr
+        %td
+          #box.fat-margin.fat-border.fat-padding
+        %td
+          #box.fat-margin.fat-border.fat-padding

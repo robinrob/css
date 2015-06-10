@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Div row
+    :css
+      .row {
+        width: 300px;
+        background: red;
+        text-align: center;
+      }
+
+      .col {
+        display: inline-block;
+        background: yellow;
+        border: 1px solid black;
+      }
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: right;
+      }
+  %body
+    .row
+      .left.col Left
+      .center.col Center
+      .right.col Right

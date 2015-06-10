@@ -1,0 +1,62 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title carousel
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      img {
+          width: 800px;
+          height: 600px;
+      }
+  %body
+    .container
+      .page-header
+        %h1 carousel
+      #bestCarsCarousel.carousel.slide{"data-ride" => "carousel"}
+        / Indicators
+        %ol.carousel-indicators
+          %li{"data-slide-to" => "0", "data-target" => "#bestCarsCarousel"}
+          %li{"data-slide-to" => "1", "data-target" => "#bestCarsCarousel"}
+          %li{"data-slide-to" => "2", "data-target" => "#bestCarsCarousel"}
+        / Wrapper for slides
+        .carousel-inner
+          .item.active
+            %img{:src => "../images/lutetia"}/
+            .carousel-caption
+              %h3 Asteroid Lutetia!
+              %p Here is asteroid Lutetia ...
+          .item
+            %img{:src => "../images/vesta"}/
+            .carousel-caption
+              %h3 Asteroid Vesta!
+              %p Here is asteroid Vesta ...
+          .item
+            %img{:src => "../images/eros.jpg"}/
+            .carousel-caption
+              %h3 Asteroid Eros!
+              %p Here is asteroid Eros ...
+        / Controls
+        %a.left.carousel-control{"data-slide" => "prev", :href => "#bestCarsCarousel"}
+          %span.glyphicon.glyphicon-chevron-left
+        %a.right.carousel-control{"data-slide" => "next", :href => "#bestCarsCarousel"}
+          %span.glyphicon.glyphicon-chevron-right
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      var options = {
+          interval: 7000,
+          pause: 'hover',
+          wrap: true
+      };
+
+      $('#bestCarsCarousel').carousel(options);
+
+      $('#bestCarsCarousel').on('slide.bs.carousel', function () {
+          console.log("Changing slide..");
+      });
+
+      $('#bestCarsCarousel').on('slid.bs.carousel', function () {
+          console.log("Slide changed.");
+      });

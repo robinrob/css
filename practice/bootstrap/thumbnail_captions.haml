@@ -1,0 +1,43 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title thumbnail_captions
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 thumbnail_captions
+      .row
+        .col-sm-6.col-md-3
+          .thumbnail
+            %a{:href => "http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg"}
+              %img{:alt => "Generic placeholder thumbnail", :src => "http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg"}/
+          .caption
+            %h3 Thumbnail label
+            %p Some sample text. Some sample text.
+        .col-sm-6.col-md-3
+          .thumbnail
+            %img{:alt => "Generic placeholder thumbnail", :src => "http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg"}/
+          .caption
+            %h3 Thumbnail label
+            %p Some sample text. Some sample text.
+        .col-sm-6.col-md-3
+          .thumbnail
+            %img{:alt => "Generic placeholder thumbnail", :src => "http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg"}/
+          .caption
+            %h3 Thumbnail label
+            %p Some sample text. Some sample text.
+        .col-sm-6.col-md-3
+          .thumbnail
+            %img{:alt => "Generic placeholder thumbnail", :src => "http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg"}/
+          .caption
+            %h3 Thumbnail label
+            %p Some sample text. Some sample text.
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+

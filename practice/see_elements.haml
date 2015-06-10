@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title See All Elements
+    :css
+      * {
+        margin: 20px;
+        padding: 20px;
+        line-height: 5em;
+      }
+
+      html {
+        margin: 20px;
+        border: 20px solid green;
+      }
+
+      head {
+        border: 20px solid yellow;
+      }
+
+      body {
+        border: 20px solid red;
+      }
+
+      div {
+        border: 20px solid blue;
+      }
+
+      p {
+        border: 20px solid orange;
+      }
+
+      footer {
+        border: 20px solid magenta;
+      }
+  %body
+    %p
+      I am the head!
+    I am the body!
+    %div
+      I am a div!
+      %p I am a p!
+    %footer I am a footer!
+    %footer I am another footer!

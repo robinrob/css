@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Before After
+    :css
+      .tip::before {
+        content: "HOT TIP!!";
+      }
+
+      .tip:after {
+        content: "Make sure you heed the advice given."
+      }
+
+      blockquote::before, blockquote::after {
+        content: '"';
+      }
+  %body
+    .tip
+      %p Somebody once told me:
+      %blockquote
+        Make sure that you learn CSS thoroughly before calling yourself a
+        web development expert!

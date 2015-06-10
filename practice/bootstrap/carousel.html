@@ -1,100 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>carousel</title>
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
-    <style type='text/css'>
-        img {
-            width: 800px;
-            height: 600px;
-        }
+    <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <style>
+      img {
+          width: 800px;
+          height: 600px;
+      }
     </style>
-
-
-</head>
-<body>
-
-<div class="container">
-    <div class="page-header">
+  </head>
+  <body>
+    <div class='container'>
+      <div class='page-header'>
         <h1>carousel</h1>
-    </div>
-
-    <div id="bestCarsCarousel" class="carousel slide" data-ride="carousel">
-
+      </div>
+      <div class='carousel slide' data-ride='carousel' id='bestCarsCarousel'>
         <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#bestCarsCarousel" data-slide-to="0"
-            ↵class="active"></li>
-            <li data-target="#bestCarsCarousel" data-slide-to="1"></li>
-            <li data-target="#bestCarsCarousel" data-slide-to="2"></li>
+        <ol class='carousel-indicators'>
+          <li data-slide-to='0' data-target='#bestCarsCarousel'></li>
+          <li data-slide-to='1' data-target='#bestCarsCarousel'></li>
+          <li data-slide-to='2' data-target='#bestCarsCarousel'></li>
         </ol>
-
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="../images/lutetia">
-
-                <div class="carousel-caption">
-                    <h3>Asteroid Lutetia!</h3>
-
-                    <p>Here is asteroid Lutetia ...</p>
-                </div>
+        <div class='carousel-inner'>
+          <div class='item active'>
+            <img src='../images/lutetia'>
+            <div class='carousel-caption'>
+              <h3>Asteroid Lutetia!</h3>
+              <p>Here is asteroid Lutetia ...</p>
             </div>
-
-            <div class="item">
-                <img src="../images/vesta">
-
-                <div class="carousel-caption">
-                    <h3>Asteroid Vesta!</h3>
-
-                    <p>Here is asteroid Vesta ...</p>
-                </div>
+          </div>
+          <div class='item'>
+            <img src='../images/vesta'>
+            <div class='carousel-caption'>
+              <h3>Asteroid Vesta!</h3>
+              <p>Here is asteroid Vesta ...</p>
             </div>
-
-            <div class="item">
-                <img src="../images/eros.jpg">
-
-                <div class="carousel-caption">
-                    <h3>Asteroid Eros!</h3>
-
-                    <p>Here is asteroid Eros ...</p>
-                </div>
+          </div>
+          <div class='item'>
+            <img src='../images/eros.jpg'>
+            <div class='carousel-caption'>
+              <h3>Asteroid Eros!</h3>
+              <p>Here is asteroid Eros ...</p>
             </div>
+          </div>
         </div>
-
         <!-- Controls -->
-        <a class="left carousel-control" href="#bestCarsCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
+        <a class='left carousel-control' data-slide='prev' href='#bestCarsCarousel'>
+          <span class='glyphicon glyphicon-chevron-left'></span>
         </a>
-        <a class="right carousel-control" href="#bestCarsCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
+        <a class='right carousel-control' data-slide='next' href='#bestCarsCarousel'>
+          <span class='glyphicon glyphicon-chevron-right'></span>
         </a>
+      </div>
     </div>
-
-</div>
-
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="js/bootstrap.js"></script>
-<script type="text/javascript">
-    var options = {
-        interval: 7000,
-        pause: 'hover',
-        wrap: true
-    };
-
-    $('#bestCarsCarousel').carousel(options);
-
-    $('#bestCarsCarousel').on('slide.bs.carousel', function () {
-        console.log("Changing slide..");
-    });
-
-    $('#bestCarsCarousel').on('slid.bs.carousel', function () {
-        console.log("Slide changed.");
-    });
-</script>
-</body>
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script>
+      var options = {
+          interval: 7000,
+          pause: 'hover',
+          wrap: true
+      };
+      
+      $('#bestCarsCarousel').carousel(options);
+      
+      $('#bestCarsCarousel').on('slide.bs.carousel', function () {
+          console.log("Changing slide..");
+      });
+      
+      $('#bestCarsCarousel').on('slid.bs.carousel', function () {
+          console.log("Slide changed.");
+      });
+    </script>
+  </body>
 </html>

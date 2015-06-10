@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title advanced_forms
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 Advanced Forms
+      .form
+        / Bootstrap 'helper class' allows you to 'disable' an input form element
+        .form-group
+          %label.col-xs-2{:for => "descField"} Description
+          .col-xs-10
+            %input#descField.form-control{:disabled => "disabled", :placeholder => "This input field is disabled", :type => "text"}/
+        /
+          Applying has-success will make the label text and border field green in color.
+          Similarly, has-warning will employ a dull brown color and has-danger will use dark red.
+          These has-* type classes will only apply colors to form-control, control-label,
+          and help-block classed elements.
+          
+          If you want to show some custom text when a user enters invalid values in the
+          input field, use a span element with class help-block. The help-block will appear below its corresponding input
+          field when invalid values are entered.
+        .form-group.has-success
+          %label.control-label.col-xs-2{:for => "descField"} Input with success
+          .col-xs-10
+            %input#inputField.form-control{:type => "text"}/
+        .form-group.has-error
+          %label.control-label.col-xs-2{:for => "descField"} Input with success
+          .col-xs-10
+            %input#inputField.form-control{:type => "text"}/
+            %span.help-block Value must be entered!
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

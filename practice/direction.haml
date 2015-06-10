@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    :css
+      .reverse {
+          direction: rtl;
+          unicode-bidi: bidi-override;
+      }
+  %body
+    %div This is default text direction.
+    .reverse This is right-to-left text direction.

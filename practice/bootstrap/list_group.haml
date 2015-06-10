@@ -1,0 +1,47 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title list_group
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 List Group
+      %ul.list-group
+        %li.list-group-item Inbox
+        %li.list-group-item Sent
+        %li.list-group-item Drafts
+        %li.list-group-item Deleted
+        %li.list-group-item Spam
+      .list-group
+        %a.list-group-item.list-group-item-success
+          Inbox
+          %span.badge 1
+        %a.list-group-item.list-group-item-info
+          Sent
+          %span.badge 2
+        %a.list-group-item
+          Drafts
+          %span.badge 3
+        %a.list-group-item.list-group-item-danger
+          Deleted
+          %span.badge 4
+        %a.list-group-item.list-group-item-warning
+          Spam
+          %span.badge 5
+      .list-group
+        %li.list-group-item.list-group-item-success
+          %h4.list-group-item-heading Success!
+          %p.list-group-item-text You did something good.
+        %li.list-group-item.active
+          %h4.list-group-item-heading Active
+          %p.list-group-item-text This is the 'active' list item.
+        %li.list-group-item.list-group-item-danger
+          %h4.list-group-item-heading Whoops!
+          %p.list-group-item-text You did something bad.
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

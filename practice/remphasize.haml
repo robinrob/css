@@ -1,0 +1,32 @@
+!!!
+%html
+  %body
+    %p
+      html
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Remphasize
+    :css
+      html {
+        font-size: 42px;
+        background-color: red;
+      }
+
+      /* Padding will be 1.5 x 42px */
+      .box {
+        font-size: 20px;
+        padding: 1.5rem;
+        background-color: lawngreen;
+      }
+
+      /* Padding will be 2 x 42px */
+      p {
+        font-size: 1rem;
+        padding: 2rem;
+        background-color: yellow;
+      }
+    .box
+      div
+      %p
+        Let's
+        = succeed "-phasize" do
+          %em rem

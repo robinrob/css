@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title button
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 Button
+      / Buttons in Bootsrap are created by adding the "btn" class to an element
+      %a.btn.btn-primary{:href => "#"} Button!
+      %br/
+      %br/
+      %button.btn.btn-primary.btn-lg{:type => "button"} Large button
+      %button.btn.btn-primary{:type => "button"} Default button
+      %button.btn.btn-primary.btn-sm{:type => "button"} Smallbutton
+      %button.btn.btn-primary.btn-xs{:type => "button"} Extrasmall button
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

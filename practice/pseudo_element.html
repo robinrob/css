@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Pseudo-Class</title>
-
-  <style type='text/css'>
-    .container:before {
-      content: "";
-      display: block;
-      width: 800px;
-      height: 600px;
-      background: url(images/eros.jpg) no-repeat;
-      background-color: black;
-    }
-  </style>
-
-  <script>
-    function submitted(e) {
-      alert(e.textfield.value)
-    }
-  </script>
-
-</head>
-<body>
-
-<div class="container">Container</div>
-
-</body>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <title>Pseudo-Class</title>
+    <style>
+      .container:before {
+        content: "";
+        display: block;
+        width: 800px;
+        height: 600px;
+        background: url(images/eros.jpg) no-repeat;
+        background-color: black;
+      }
+    </style>
+    <script>
+      function submitted(e) {
+        alert(e.textfield.value)
+      }
+    </script>
+  </head>
+  <body>
+    <div class='container'>Container</div>
+  </body>
 </html>

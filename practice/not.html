@@ -1,49 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>Not</title>
-
-    <style type='text/css'>
+    <style>
       p {
         font-size: 1.5em;
       }
-
+      
       p:not(.p1) {
         color: blue;
       }
-
+      
       p:not(.p2) {
         color: red;
       }
-
+      
       p:not(.p1) span {
         color: green;
       }
-
+      
       p:not(.p2) span {
         color: purple;
       }
-
+      
       /* For all links that point outside of the domain of the website, on hover,
       set this style! */
       a[href^="http://"]:not([href^="http://mrrobinsmith.com"]):hover {
         font-weight: bold;
         background-color: red;
       }
-  </style>
-
-</head>
-<body>
-
-  <h1>Heading 1</h1>
-  <p class="p1">Section <span>1</span></p> 
-  <p class="p1"> Please go <a href="http://wikipedia.org/wanker">here</a> for more information!
-
-  <h2>Heading 2</h2>
-  <p class="p2">Section <span>1.2</span></p>
-  <p class="p2"> Please go <a href="http://mrrobinsmith.com/awesome">here</a> for more information!
-
-</body>
+    </style>
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <p class='p1'>
+      Section
+      <span>1</span>
+    </p>
+    <p class='p1'>
+      Please go
+      <a href='http://wikipedia.org/wanker'>here</a>
+      for more information!
+    </p>
+    <h2>Heading 2</h2>
+    <p class='p2'>
+      Section
+      <span>1.2</span>
+    </p>
+    <p class='p2'>
+      Please go
+      <a href='http://mrrobinsmith.com/awesome'>here</a>
+      for more information!
+    </p>
+  </body>
 </html>

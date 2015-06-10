@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title badge
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 badge
+      %a.btn.btn-primary.btn-lg{:href => "#"}
+        Inbox
+        %span.badge 23
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

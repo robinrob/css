@@ -1,0 +1,61 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title collapse
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      #accordion.panel-group
+        / Panel 1
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                Collapsible Group Item #1
+          #collapseOne.panel-collapse.collapse.in
+            .panel-body
+              Lorem ipsum dolor sit amet, consectetur ...
+          / Panel 2
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                  Collapsible Group Item #2
+            #collapseTwo.panel-collapse.collapse
+              .panel-body
+                Lorem ipsum dolor sit amet, consectetur ...
+          / Panel 3
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                  Collapsible Group Item #3
+            #collapseThree.panel-collapse.collapse
+              .panel-body
+                Lorem ipsum dolor sit amet, consectetur ...
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      //    $('.collapse').collapse({
+      //        toggle: false
+      //    });
+      
+          $('.collapse').on('show.bs.collapse', function () {
+              console.log('Opening tab..');
+          });
+      
+          $('.collapse').on('shown.bs.collapse', function () {
+              console.log('Tab opened.');
+          });
+      
+          $('.collapse').on('hide.bs.collapse', function () {
+              console.log('Hiding tab..');
+          });
+      
+          $('.collapse').on('hidden.bs.collapse', function () {
+              console.log('Tab hidden');
+          });

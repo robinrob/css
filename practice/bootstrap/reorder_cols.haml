@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title reorder_cols
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      .col1 {
+          background-color: yellow;
+      }
+
+      .col2 {
+          background-color: cyan;
+      }
+  %body
+    .container
+      .row
+        .col-xs-9.col1
+          %h1 Normal column
+        .col-xs-3.col2
+          %h1 Normal column
+      .row
+        .col-xs-9.col-xs-push-3.col1
+          %h1 Pushed Column
+        .col-xs-3.col-xs-pull-9.col2
+          %h1 Pulled Column
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title dropdown
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      #myDropdown.dropdown
+        %a.myDropdown{"data-target" => "#", "data-toggle" => "dropdown", :href => "#"}
+          Dropdown
+          %span.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => "#"} Link 1
+          %li
+            %a{:href => "#"} Link 2
+          %li
+            %a{:href => "#"} Link 3
+          %li
+            %a{:href => "#"} Link 4
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      $(document).ready(function(){
+
+          $('.myDropdown').dropdown('toggle');
+
+          $('#myDropdown').on('show.bs.dropdown', function () {
+              console.log("Opening dropdown..");
+          });
+
+          $('#myDropdown').on('shown.bs.dropdown', function () {
+              console.log("Dropdown opened..");
+          });
+
+          $('#myDropdown').on('hide.bs.dropdown', function () {
+              console.log("Hiding dropdown..");
+          });
+
+          $('#myDropdown').on('hidden.bs.dropdown', function () {
+              console.log("Dropdown hidden..");
+          });
+
+      });

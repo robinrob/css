@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title tooltip
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      .container {
+          margin-top: 100px;
+      }
+  %body
+    .container
+      %button.btn.btn-default.tooltipButton{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "I am a Bootstrap button", :type => "button"} Who am I?
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      $(document).ready(function(){
+              $('.tooltipButton').tooltip();
+          });
+      
+      //    var options = {
+      //        animation : true;
+      //    };
+      //
+      //    $(".tooltipButton").tooltip(options);
+      
+      //    $('.tooltipButton').tooltip('show');
+      
+          $('.tooltipButton').on('show.bs.tooltip', function () {
+              console.log("Showing tooltip..");
+          });
+      
+          $('.tooltipButton').on('shown.bs.tooltip', function () {
+              console.log("Tooltip shown.");
+          });
+      
+          $('.tooltipButton').on('hide.bs.tooltip', function () {
+              console.log("Hiding tooltip..");
+          });
+      
+          $('.tooltipButton').on('hidden.bs.tooltip', function () {
+              console.log("Tooltip hidden.");
+          });

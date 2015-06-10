@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title well
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 Well
+      .well
+        %p Help! I am in a well!
+      .well.well-lg
+        %p Help! I am in a large well!
+      .well.well-sm
+        %p I am in a small well it's ok!
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

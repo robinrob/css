@@ -1,44 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>Grid</title>
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
-    <style type='text/css'>
-        .col01 {
-            background-color: red;
-        }
-
-        .col11 {
-            background-color: orange;
-        }
-
-        .col12 {
-            background-color: yellow;
-        }
+    <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <style>
+      .col {
+        font-size: 25px;
+        color: white;
+      }
+      
+      .col:nth-of-type(1) {
+          background-color: red;
+      }
+      
+      .col:nth-of-type(2) {
+          background-color: green;
+      }
+      
+      .col:nth-of-type(3) {
+          background-color: blue;
+      }
+      
+      .row > .col > .row > .col:nth-of-type(1) {
+        background-color: orange;
+      }
+      
+      .row > .col > .row > .col:nth-of-type(2) {
+        background-color: purple;
+      }
+      
+      .row > .col > .row > .col:nth-of-type(3) {
+        background-color: pink;
+      }
+      
+      body {
+        margin-left: 100px;
+      }
+      
+      .container {
+        margin: 0;
+        padding: 0;
+      }
     </style>
-
-
-</head>
-<body>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xs-6 col-lg-12 col01">
-            <h4>Column 1</h4>
+  </head>
+  <body>
+    <div class='container'>
+      <h2>
+        Row 1 - Nested Rows
+      </h2>
+      <div class='row'>
+        <div class='col-xs-6 col'>
+          Column 1 (xs-6)
+          <div class='row'>
+            <div class='col-xs-4 col'>
+              Column 1
+            </div>
+            <div class='col-xs-4 col'>
+              Column 2
+            </div>
+            <div class='col-xs-4 col'>
+              Column 3
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col'>
+              Column 1
+            </div>
+          </div>
         </div>
-        <div class="col-xs-6 col-lg-3 col11">
-            <h4>Column 1</h4>
+      </div>
+      <h2>
+        Row 2 - Row Overflow
+      </h2>
+      <div class='row'>
+        <div class='col-xs-6 col'>
+          Column 1 (xs-6)
         </div>
-        <div class="col-xs-6 col-lg-3 col12">
-            <h4>Column 2</h4>
+        <div class='col-xs-6 col'>
+          Column 2 (xs-6)
         </div>
+        <div class='col-xs-6 col'>
+          Column 3 (xs-6)
+        </div>
+      </div>
+      <h2>Row 3 - Nested Container</h2>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-xs-12 col'>
+            Column 1
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-<script src="js/bootstrap.js"></script>
-</body>
+    <script src='js/bootstrap.js'></script>
+  </body>
 </html>

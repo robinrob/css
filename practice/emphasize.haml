@@ -1,0 +1,32 @@
+!!!
+%html
+  %body
+    %p
+      html
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Emphasize
+    :css
+      html {
+        font-size: 42px;
+        background-color: red;
+      }
+
+      /* Padding will be 1.5 x 20px */
+      .box {
+        font-size: 20px;
+        padding: 1.5em;
+        background-color: lawngreen;
+      }
+
+      /* Padding will be 2 x 10px */
+      p {
+        font-size: 1em;
+        padding: 2em;
+        background-color: yellow;
+      }
+    .box
+      div
+      %p
+        Let's
+        = succeed "-phasize" do
+          %em em

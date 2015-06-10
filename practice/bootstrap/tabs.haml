@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title tabs
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      / Nav tabs
+      %ul.nav.nav-tabs
+        %li.active
+          %a{"data-toggle" => "tab", :href => "#home"} Home
+        %li
+          %a{"data-toggle" => "tab", :href => "#profile"} Profile
+        %li
+          %a{"data-toggle" => "tab", :href => "#messages"} Messages
+        %li
+          %a{"data-toggle" => "tab", :href => "#settings"} Settings
+      / Tab panes
+      .tab-content
+        #home.tab-pane.fade.in.active
+          %h3 The home
+        #profile.tab-pane.fade.in
+          %h3 The profile
+        #messages.tab-pane.fade.in
+          %h3 Messages central
+        #settings.tab-pane.fade.in
+          %h3 Setting panel
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      $('.nav-tabs li a').on('show.bs.tab', function () {
+          console.log("Opening tab");
+      });
+
+      $('.nav-tabs li a').on('shown.bs.tab', function () {
+          console.log("Tab opened!");
+      });
