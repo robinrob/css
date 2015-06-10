@@ -43,7 +43,10 @@ gulp.task('haml-watch', function() {
     pipe(changed(dest, {extension: '.html'})).
     pipe(haml()).
     pipe(gulp.dest(dest)).
-    pipe(gcallback(reload))
+    pipe(gcallback(function() {
+        console.log("HAML DONE")
+        reload()
+      }))
 })
 
 // gulp.task('reload', function() {
