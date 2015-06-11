@@ -1,3 +1,4 @@
+require('shelljs/global')
 var gulp        = require('gulp');
 var browsersync = require('browser-sync');
 var reload      = browsersync.reload
@@ -7,7 +8,7 @@ var changed     = require('gulp-changed');
 var runsequence = require('run-sequence')
 var gcallback = require('gulp-callback')
 var plumber = require('gulp-plumber')
-require('shelljs/global')
+var argv = require('yargs').argv
 
 var messages = {
   hamlBuild: '<span style="color: grey">Running:</span> $ haml'
@@ -24,11 +25,14 @@ gulp.task('reload', function () {
 
 
 gulp.task('browser-sync', function() {
+  var open = argv.file || "open"
+  console.log("open: " + open)
   browsersync({
     server: {
-      baseDir: '.'
+      baseDir: '.',
+      index: open
     },
-    browser: "safari"
+    browser: "safari",
   });
 });
 
