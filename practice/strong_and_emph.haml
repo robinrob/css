@@ -5,6 +5,34 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title Strong And Emph
     :css
+      b {
+        font-weight: normal;
+      }
+
+      i {
+        font-style: normal;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+
+      em {
+        font-style: normal;
+      }
 
   %body
-    WANK
+    %p
+      %b This text is inside b tags
+    %p
+      %i This text is inside i tags
+    %p
+      %strong This text is inside strong tags
+    %p
+      %em This text is inside em tags
+
+    %h2
+      Read this stack-overflow
+      %a{:href => "http://stackoverflow.com/questions/271743/whats-the-difference-between-b-and-strong-i-and-em", :target => "_blank"}post
+      for a good explanation of the difference between strong and b and em and i tags.
+      
