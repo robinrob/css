@@ -3,33 +3,42 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     :css
-      #box {
-        width:100px;
-        height:100px;
-        direction: rtl;
+      body {
+        background-color: yellow;
       }
 
-      .fat-padding {
-        padding: 50px 50px 50px 50px;
-      }
+      .box-bg {
+        width: 220px;
+        height: 220px;
+        background-color: blue;
+        position: relative;
+        z-index: 0;
+      } 
 
-      .fat-border {
+      .box {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        margin: 20px;
         border: solid red;
-        border-width:5px 5px 5px 5px;
+        border-width: 20px;
+
+        position: absolute;
+        z-index: 1;
       }
 
-      .fat-margin {
-        margin: 50px 50px 50px 50px;
+      .img {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        background-size: 100px 100px;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 1;
       }
+
   %body
-    %table
-      %tr
-        %td
-          #box.fat-margin.fat-border.fat-padding hello
-        %td
-          #box.fat-margin.fat-border.fat-padding
-      %tr
-        %td
-          #box.fat-margin.fat-border.fat-padding
-        %td
-          #box.fat-margin.fat-border.fat-padding
+    %h1 Margin-Border-Padding-Content
+    .box-bg
+      .box
+        .img

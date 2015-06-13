@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Background Origin
+    :css
+      div {
+        width: 100px;
+        height: 100px;
+        padding: 50px;
+        border: 50px solid red;
+        background-size: 100%;
+        background-image: url('images/vesta.jpg');
+      }
+
+      .content {
+        background-origin: content-box;
+      }
+
+      .padding {
+        background-origin: padding-box;
+      }
+
+      .border {
+        background-origin: border-box;
+      }
+
+
+  %body
+    .content
+    .padding
+    .border

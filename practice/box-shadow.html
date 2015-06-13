@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>Box Shadow</title>
+    <style>
+      body {
+        padding-left: 100px;
+      }
+      
+      div {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 100px;
+      }
+      
+      .shadow {
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+      }
+      
+      .multi-shadow {
+        box-shadow: -10px -10px 10px 10px rgba(0, 0, 0, 0.75),
+                    10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+      } 
+      
+      .inset-shadow {
+        box-shadow: inset -10px -10px 10px 10px rgba(0, 0, 0, 0.75),
+                    inset 10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bit of transparency on the shadow is good!</h1>
+    <h2>Shadow</h2>
+    <div class='shadow'></div>
+    <h2>Multi Shadow - this is just a list of 4-border shadows - you can add as many shadows as you want</h2>
+    <div class='multi-shadow'></div>
+    <h2>Inset Shadow</h2>
+    <div class='inset-shadow'></div>
+  </body>
+</html>

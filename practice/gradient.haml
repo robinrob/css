@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
-    %title gradient
+    %title Gradient
     :css
       h3 {
           margin-bottom: 10px;
@@ -70,17 +70,12 @@
 
       /*Gradient between multiple colors: */
       .rainbow {
-          background-image: linear-gradient(red, orange, yellow, green, blue, cyan, violet);
+          background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
       }
 
       /*Color stops can be defined like this: */
       .rainbow-stopped {
           background-image: linear-gradient(red 10%, green 70%, blue 84%, yellow 90%);
-      }
-
-      /*Gradient can be set at an angle: */
-      .rainbow-diag {
-          background-image: linear-gradient(red, orange, yellow, green, blue, cyan, violet);
       }
 
       /* Multiple gradients: */
@@ -93,6 +88,36 @@
           background-image: linear-gradient(to left, rgba(0,0,0,0.5), rgba(255,255,255,0.5)), linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(255,0,0,0.5));
           background-color: orangered;
       }
+
+      /* Repeating gradient */
+      .repeating-linear {
+        background: repeating-linear-gradient(red, yellow 10%, orange 20%);
+      }
+
+      .repeating-radial {
+        background: repeating-radial-gradient(red, yellow 20%, orange 30%);
+      }
+
+      .stripes {
+        /* Here you need to transition between two points of the same color,
+        then match up the end and start transition points of the constrasting
+        colors */
+        background-image: repeating-linear-gradient(45deg, red 0, red 10px, yellow 10px, yellow 20px);
+      }
+
+      .farthest-side {
+        /* The two percentages define an x-y coodinate point. The gradient is
+        drawn FROM that point TO the farthest side of the element from that
+        point. */
+        background: radial-gradient(farthest-side at 25% 25%,blue,green,yellow,black);
+      }
+
+      .closest-corner {
+        /* The two percentages define an x-y coodinate point. The gradient is
+        drawn FROM that point TO the closest corner of the element from that
+        point. */
+        background: radial-gradient(closest-corner at 75% 75%,blue,green,yellow,black);
+
   %body
     .main
       %h3 Default Gradient
@@ -122,6 +147,18 @@
       %h3 Multiple Gradients
       .box-row
         .box.multiple-grad
-      %h3 Multiple Gradients + Background Color
+      %h3 Repeating Linear
       .box-row
-        .box.multiple-grad-bg
+        .box.repeating-linear
+      %h3 Repeating Radial
+      .box-row
+        .box.repeating-radial
+      %h3 Stripes
+      .box-row
+        .box.stripes
+      %h3 Farthest Side
+      .box-row
+        .box.farthest-side
+      %h3 Closest Corner
+      .box-row
+        .box.closest-corner
