@@ -68,3 +68,6 @@
 [submodule "css"]
 	path = css
 	url = git@github.com:robinrob/css.git
+[submodule "fish"]
+	path = fish
+	url = git@github.com:robinrob/fish.git
