@@ -15,6 +15,12 @@
 [submodule "coq"]
   path = coq
   url = git@github.com:robinrob/coq.git
+[submodule "css"]
+  path = css
+  url = git@github.com:robinrob/css.git
+[submodule "fish"]
+  path = fish
+  url = git@github.com:robinrob/fish.git
 [submodule "force.com"]
   path = force.com
   url = git@bitbucket.org:robinrob/force.com.git
@@ -40,6 +46,9 @@
   path = perl
   url = git@github.com:robinrob/perl.git
   branch = master
+[submodule "php"]
+  path = php
+  url = git@github.com:robinrob/php.git
 [submodule "python"]
   path = python
   url = git@github.com:robinrob/python.git
@@ -65,9 +74,3 @@
   path = zsh
   url = git@github.com:robinrob/zsh.git
   branch = master
-[submodule "css"]
-	path = css
-	url = git@github.com:robinrob/css.git
-[submodule "fish"]
-	path = fish
-	url = git@github.com:robinrob/fish.git
