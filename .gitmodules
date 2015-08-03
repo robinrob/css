@@ -32,10 +32,6 @@
   path = java
   url = git@github.com:robinrob/java.git
   branch = master
-[submodule "javascript"]
-  path = javascript
-  url = git@github.com:robinrob/javascript.git
-  branch = master
 [submodule "markdown"]
   path = markdown
   url = git@github.com:robinrob/markdown.git
@@ -74,3 +70,6 @@
   path = zsh
   url = git@github.com:robinrob/zsh.git
   branch = master
+[submodule "javascript"]
+	path = javascript
+	url = git@github.com:robinrob/javascript.git
