@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title components-media.html
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      img {
+          width: 200px;
+          height: 150px;
+      }
+  %body
+    .container
+      .page-header
+        %h1 Media Components
+      .media
+        %a.pull-left{:href => "#"}
+          %img.media-object{:alt => "Asteroid", :src => "../images/eros.jpg"}/
+        .media-body
+          %h4.media-heading Awesome asteroid!
+          %p This asteroid pictured is asteroid Eros.
+          / Second Media Object
+          .media
+            %a.pull-left{:href => "#"}
+              %img.media-object{:alt => "Syed Fazle Rahman", :src => "../images/eros.jpg"}/
+            .media-body
+              %h4.media-heading Another asteroid
+              %p This is also asteroid Eros!
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

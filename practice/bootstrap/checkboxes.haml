@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title checkboxes
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .btn-group{"data-toggle" => "buttons"}
+        %label.btn.btn-default{:type => "checkbox"}
+          Option 1
+        %label.btn.btn-default
+          %input{:type => "checkbox"}/
+          Option 2
+        %label.btn.btn-default
+          %input{:type => "checkbox"}/
+          Option 3
+      .btn-group{"data-toggle" => "buttons"}
+        %label.btn.btn-info
+          %input{:name => "options", :type => "radio"}/
+          Option 1
+        %label.btn.btn-info
+          %input{:name => "options", :type => "radio"}/
+          Option 2
+        %label.btn.btn-info
+          %input{:name => "options", :type => "radio"}/
+          Option 3
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}

@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Text Transform
+    :css
+      p {
+        text-transform: lowercase;
+      }
+
+      p span.upper {
+        text-transform: uppercase;
+      }
+
+      p span {
+        text-transform: capitalize;
+      }
+  %body
+    %p
+      This page
+      %span.upper
+        demonstrates
+        %span
+          %span> text transforms
+          \.

@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Pseudo-Class
+    :css
+      .container:before {
+        content: "";
+        display: block;
+        width: 800px;
+        height: 600px;
+        background: url(images/eros.jpg) no-repeat;
+        background-color: black;
+      }
+    :javascript
+      function submitted(e) {
+        alert(e.textfield.value)
+      }
+  %body
+    .container Container

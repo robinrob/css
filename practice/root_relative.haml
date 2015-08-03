@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Root Relative
+    :css
+      div {
+        width: 200px;
+        height: 200px;
+        background-size: 100%;
+      }
+      .document-relative {
+        background-image: url('images/vesta.jpg')
+      }
+
+      .root-relative {
+        background-image: url('/images/vesta.jpg')
+      }
+
+      .absolute {
+        background-image: url('http://localhost:3000/images/vesta.jpg')
+      }
+
+
+  %body
+    %h2 Document Relative - Always displays
+    .document-relative
+    %h1 These two only display when page is served by web server:
+    %h2 Root Relative - Only displays when served by web server
+    .root-relative
+    %h2
+      Absolute - Only displays when served by web server. If file is available
+      and opened locally, the web server just has to be RUNNING.
+    .absolute

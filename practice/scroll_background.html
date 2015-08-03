@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>Scroll Background</title>
+    <style>
+      body {
+        height: 2000px;
+        background: url(images/scroll_top.jpg) center top no-repeat,
+                    url(images/scroll_bottom.jpg) center bottom no-repeat,
+                    url(images/scroll_middle.jpg) center top repeat-y;
+        background-size: 100% auto;
+      }
+      
+      .bg {
+        width: 100px;
+        height: 800px;
+        background: url(images/scroll_top.jpg) center top no-repeat,
+                    url(images/scroll_bottom.jpg) center bottom no-repeat,
+                    url(images/scroll_middle.jpg) center top repeat-y;
+        background-size: 100% auto;
+        opacity: 0.75;
+      }
+      
+      h1 {
+        font-size: 50px;
+        text-shadow: 2px 2px grey;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Daily Scroll!</h1>
+    <div class='bg'></div>
+  </body>
+</html>

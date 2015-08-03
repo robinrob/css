@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Child Combinator
+    :css
+      * {
+            border: 20px solid red;
+          }
+      		#container > .box {
+            font-style: italic;
+      		}
+  %body
+    / The 'box' has to be an immediate descendant of the 'container'.
+    #container
+      Container:
+      .box
+        First div (box) - styles apply here!
+        %div Inner div of first div - styles still apply because i am contained within first child of Container!
+      %div Second div - styles do not apply to successive children!

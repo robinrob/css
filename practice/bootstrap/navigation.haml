@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title navigation
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 Navigation
+      .page-header
+        %h2 Tabs
+      %ul.nav.nav-tabs
+        %li.active
+          %a{:href => "#"} About
+        %li
+          %a{:href => "#"} Activity
+        %li
+          %a{:href => "#"} Blog
+      .page-header
+        %h2 Pills
+      %ul.nav.nav-pills
+        %li.active
+          %a{:href => "#"} About
+        %li
+          %a{:href => "#"} Activity
+        %li
+          %a{:href => "#"} Blog
+      .page-header
+        %h2 Stacked
+      %ul.nav.nav-pills.nav-stacked
+        %li.active
+          %a{:href => "#"} About
+        %li
+          %a{:href => "#"} Activity
+        %li
+          %a{:href => "#"} Blog
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.js"}

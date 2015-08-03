@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>form</title>
+    <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <style>
+      .btn-full {
+          width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='page-header'>
+        <h1>Forms</h1>
+      </div>
+      <div class='page-header'>
+        <h1>Vertical Form</h1>
+      </div>
+      <form class='form'>
+        <div class='form-group'>
+          <label for='nameField'>Name</label>
+          <input class='form-control' id='nameField' placeholder='Your Name' type='text'>
+        </div>
+        <div class='form-group'>
+          <label for='emailField'>Email</label>
+          <input class='form-control' id='emailField' placeholder='Your Email' type='email'>
+        </div>
+        <div class='form-group'>
+          <label for='phoneField'>Phone</label>
+          <input class='form-control' id='phoneField' placeholder='Your Phone Number' type='text'>
+        </div>
+        <div class='form-group'>
+          <label for='descField'>Description</label>
+          <textarea class='form-control' id='descField' placeholder='Your Comments'></textarea>
+        </div>
+        <button class='btn btn-primary btn-full' type='submit'>Submit</button>
+        <button class='btn btn-default btn-full' type='reset'>Reset</button>
+      </form>
+      <div class='page-header'>
+        <h1>Horizontal Form</h1>
+      </div>
+      <form class='form-horizontal'>
+        <div class='form-group'>
+          <label class='col-xs-2' for='nameField'>Name</label>
+          <div class='col-xs-10'>
+            <input class='form-control' id='nameField' placeholder='Your Name' type='text'>
+          </div>
+        </div>
+        <div class='form-group'>
+          <label class='col-xs-2' for='emailField'>Email</label>
+          <div class='col-xs-10'>
+            <input class='form-control' id='emailField' placeholder='Your Email' type='email'>
+          </div>
+        </div>
+        <div class='form-group'>
+          <label class='col-xs-2' for='phoneField'>Phone</label>
+          <div class='col-xs-10'>
+            <input class='form-control' id='phoneField' placeholder='Your Phone Number' type='text'>
+          </div>
+        </div>
+        <div class='form-group'>
+          <label class='col-xs-2' for='descField'>Description</label>
+          <div class='col-xs-10'>
+            <textarea class='form-control' id='descField' placeholder='Your Comments'></textarea>
+          </div>
+        </div>
+        <div class='col-xs-10 col-xs-offset-2'>
+          <button class='btn btn-primary' type='submit'>Submit</button>
+          <button class='btn btn-default' type='reset'>Reset</button>
+          <div class='radio'>
+            <label>
+              <input type='radio' value='Remember'>
+              Remember Choices
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class='page-header'>
+        <h1>Inline Form</h1>
+      </div>
+      <div class='well well-sm'>
+        <form class='form-inline'>
+          <div class='form-group'>
+            <input class='form-control' id='emailField' placeholder='Enter email' type='email'>
+          </div>
+          <div class='form-group'>
+            <input class='form-control' id='passwordField' placeholder='Password' type='password'>
+          </div>
+          <div class='checkbox'>
+            <label>
+              <input type='checkbox'>
+              Remember me
+            </label>
+          </div>
+          <button class='btn btn-primary' type='submit'>Sign in</button>
+        </form>
+      </div>
+    </div>
+    <script src='js/jquery.js'></script>
+    <script src='js/bootstrap.js'></script>
+  </body>
+</html>

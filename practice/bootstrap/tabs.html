@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>tabs</title>
+    <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <!-- Nav tabs -->
+      <ul class='nav nav-tabs'>
+        <li class='active'>
+          <a data-toggle='tab' href='#home'>Home</a>
+        </li>
+        <li>
+          <a data-toggle='tab' href='#profile'>Profile</a>
+        </li>
+        <li>
+          <a data-toggle='tab' href='#messages'>Messages</a>
+        </li>
+        <li>
+          <a data-toggle='tab' href='#settings'>Settings</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class='tab-content'>
+        <div class='tab-pane fade in active' id='home'>
+          <h3>The home</h3>
+        </div>
+        <div class='tab-pane fade in' id='profile'>
+          <h3>The profile</h3>
+        </div>
+        <div class='tab-pane fade in' id='messages'>
+          <h3>Messages central</h3>
+        </div>
+        <div class='tab-pane fade in' id='settings'>
+          <h3>Setting panel</h3>
+        </div>
+      </div>
+    </div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script>
+      $('.nav-tabs li a').on('show.bs.tab', function () {
+          console.log("Opening tab");
+      });
+      
+      $('.nav-tabs li a').on('shown.bs.tab', function () {
+          console.log("Tab opened!");
+      });
+    </script>
+  </body>
+</html>

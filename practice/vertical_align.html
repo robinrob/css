@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>Vertical Align</title>
+    <style>
+      div {
+        background: red;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      #one {
+        display: table;
+      }
+      
+      #one span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      
+      #two {
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='one'>
+      <span>Centered!</span>
+    </div>
+    <div id='two'>
+      <span>Centered!</span>
+    </div>
+  </body>
+</html>

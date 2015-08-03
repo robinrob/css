@@ -1,0 +1,74 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Inline vs. Block Layout Demo
+    %script{:src => "http://code.jquery.com/jquery-git2.js", :type => "text/javascript"}
+    %link{:href => "/css/normalize.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/result-light.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      #back-box {
+        width:600px; height:370px;
+        background-color: #ccae8f;
+        margin-top: 100px;
+      }
+
+      #back-box-text {
+        margin-left: 40px;
+        margin-right: 40px;
+        top: 2em;
+        vertical-align: bottom;
+        position: relative;
+        color: #5b4933;
+      }
+
+      #title-box {
+        width:530px; height:110px;
+        background-color: #5b4933;
+        vertical-align: top;
+        position: relative;
+        top: 0.86em;
+        color: white;
+        text-align: center;
+      }
+
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      p, .global-font {
+        line-height: normal;
+        font-size: 35px;
+      }
+
+      .highlight {
+        background-color: #c06808;
+
+        /* The remaining code extends the highlighting beyond the word without displacing surrounding words: */
+        padding-left: 0.15em;
+        padding-right: 0.15em;
+        /*This is equivalent to the padding approach: */
+        /*border-style: solid;*/
+        /*border-color: #c06808;*/
+        /*border-width: 0 0.15em 0 0.15em;*/
+
+        margin-right: -0.15em;
+        margin-left: -0.15em;
+      }
+  %body
+    #back-box.center.global-font
+      #title-box.center.global-font
+        %p
+          This is a
+          %span.highlight block-level
+          element
+      %p#back-box-text.center.fixed
+        The rectangle that appears behind the word
+        %span.highlight inline
+        in this paragraph is an inline-level element.

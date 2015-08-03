@@ -1,0 +1,81 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Grid
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      .col {
+        font-size: 25px;
+        color: white;
+      }
+
+      .col:nth-of-type(1) {
+          background-color: red;
+      }
+
+      .col:nth-of-type(2) {
+          background-color: green;
+      }
+
+      .col:nth-of-type(3) {
+          background-color: blue;
+      }
+
+      .row > .col > .row > .col:nth-of-type(1) {
+        background-color: orange;
+      }
+
+      .row > .col > .row > .col:nth-of-type(2) {
+        background-color: purple;
+      }
+
+      .row > .col > .row > .col:nth-of-type(3) {
+        background-color: pink;
+      }
+
+      body {
+        margin-left: 100px;
+      }
+
+      .container {
+        margin: 0;
+        padding: 0;
+      }
+
+  %body
+    .container
+      %h2
+        Row 1 - Nested Rows
+      .row
+        .col-xs-6.col
+          Column 1 (xs-6)
+          .row
+            .col-xs-4.col
+              Column 1
+            .col-xs-4.col
+              Column 2
+            .col-xs-4.col
+              Column 3
+          .row
+            .col-xs-12.col
+              Column 1
+      %h2
+        Row 2 - Row Overflow
+      .row
+        .col-xs-6.col
+          Column 1 (xs-6)
+        .col-xs-6.col
+          Column 2 (xs-6)
+        .col-xs-6.col
+          Column 3 (xs-6)
+
+      %h2 Row 3 - Nested Container
+      .container
+        .row
+          .col-xs-12.col
+            Column 1
+
+
+    %script{:src => "js/bootstrap.js"}

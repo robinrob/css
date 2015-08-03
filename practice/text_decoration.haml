@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Text Decoration
+    :css
+      p span {
+        text-decoration: underline blink;
+      }
+  %body
+    %p
+      Watch out for
+      %span blinking
+      text.

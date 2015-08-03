@@ -1,0 +1,87 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    :css
+      .box-row {
+          height: 100px;
+          margin: 10% 0 3% 0;
+          text-align: center;
+          /*background-color: yellow;*/
+      }
+
+      .box {
+          box-sizing: border-box;
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          background-color: black;
+          border: 2px solid black;
+          box-shadow: 1px 1px 1px;
+          border-radius: 5px;
+          position: relative;
+          top: 34px;
+      }
+
+      .rotatein {
+          transform: translateX(-800%);
+          animation: boxmove 2s ease-out 1s 1 normal forwards;
+
+          /* Currently not well-supported! */
+          -webkit-animation: boxmove 2s ease-out 1s 1 normal forwards;
+      }
+
+      .fadein {
+          animation: fadein 2s;
+          -webkit-animation: fadein 2s;
+      }
+
+      /* Currently not well-supported! */
+      @-webkit-keyframes boxmove {
+          0% {
+              -webkit-transform: translateX(-800%) rotate(0);
+          }
+
+          100% {
+              -webkit-transform: translateX(0) rotate(-360deg);
+          }
+
+      }
+
+      @keyframes boxmove {
+          0% {
+              transform: translateX(-800%) rotate(0);
+          }
+
+
+          100% {
+              transform: translateX(0) rotate(-360deg);
+          }
+      }
+
+      @-webkit-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          to: 1;
+        }
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          to: 1;
+        }
+      }
+
+
+  %body
+    .box-row
+      .box.rotatein
+    .box-row
+      .box.fadein

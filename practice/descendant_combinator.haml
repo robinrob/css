@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Descendant Combinator
+    :css
+      #container .box {
+            width: 100px;
+            height: 100px;
+            border: 20px solid red;
+            font-style: italic;
+      		}
+  %body
+    / The 'box' has to be a descendant of the 'container'.
+    #container
+      .box No way
+    / This is NOT how it works!
+    / <div id="container" class="box">No way</div>

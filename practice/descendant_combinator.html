@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <title>Descendant Combinator</title>
+    <style>
+      #container .box {
+            width: 100px;
+            height: 100px;
+            border: 20px solid red;
+            font-style: italic;
+      		}
+    </style>
+  </head>
+  <body>
+    <!-- The 'box' has to be a descendant of the 'container'. -->
+    <div id='container'>
+      <div class='box'>No way</div>
+    </div>
+    <!-- This is NOT how it works! -->
+    <!-- <div id="container" class="box">No way</div> -->
+  </body>
+</html>

@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title First-of-type
+    :css
+      p:first-of-type {
+        color: #ff0000;
+      }
+
+      p:last-of-type {
+        color: #0000ff;
+      }
+
+      p:nth-of-type(even) {
+        color: #00ff00;
+      }
+  %body
+    %h1 See 'nth child' example for other possibilities.
+    %p First paragraph.
+    %p Second paragraph.
+    %p Third paragraph.
+    %p Fourth paragraph.
+    %p Fifth paragraph.

@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Box Shadow
+    :css
+      body {
+        padding-left: 100px;
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 100px;
+      }
+
+      .shadow {
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+      }
+
+      .multi-shadow {
+        box-shadow: -10px -10px 10px 10px rgba(0, 0, 0, 0.75),
+                    10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+      } 
+
+      .inset-shadow {
+        box-shadow: inset -10px -10px 10px 10px rgba(0, 0, 0, 0.75),
+                    inset 10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+      } 
+
+  %body
+    %h1 Bit of transparency on the shadow is good!
+
+    %h2 Shadow
+    .shadow
+    %h2 Multi Shadow - this is just a list of 4-border shadows - you can add as many shadows as you want
+    .multi-shadow
+    %h2 Inset Shadow
+    .inset-shadow

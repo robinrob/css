@@ -1,0 +1,75 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Alternating Sides
+    :css
+      body {
+        width: 600px;
+        margin-left: 100px;
+      }
+
+      .row {
+        width: 70%;
+      }
+
+      .main {
+        background-color: blue;
+      }
+
+      .main > .row:nth-child(odd) {
+        background-color: yellow;
+        float: left;
+      }
+
+      .main > .row:nth-child(even) {
+        background-color: red;
+        float: right;
+      }
+
+
+  %body
+    .main
+      .row
+        %ul
+          %li
+            WANKER
+          %li
+            WANKER
+          %li
+            WANKER
+          %li
+            WANKER
+          %li
+            WANKER
+      .row
+        %ul
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+          %li
+            TOSSER
+
+      .row
+        %ul
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+          %li
+            PRICK
+

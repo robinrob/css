@@ -1,0 +1,50 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Nth Child
+    :css
+      tr:nth-child(odd) {
+        background-color: #d9f0ff
+      }
+
+      tr:nth-child(even) {
+        background-color: #ffffff;
+      }
+
+      tr td:nth-child(3n+2) {
+        background-color: #00ff00;
+      }
+  %body
+    %table{:style => "width: 100%"}
+      %tr
+        %td Row1
+        %td Row1
+        %td Row1
+        %td Row1
+        %td Row1
+      %tr
+        %td Row2
+        %td Row2
+        %td Row2
+        %td Row2
+        %td Row2
+      %tr
+        %td Row3
+        %td Row3
+        %td Row3
+        %td Row3
+        %td Row3
+      %tr
+        %td Row4
+        %td Row4
+        %td Row4
+        %td Row4
+        %td Row4
+      %tr
+        %td Row5
+        %td Row5
+        %td Row5
+        %td Row5
+        %td Row5

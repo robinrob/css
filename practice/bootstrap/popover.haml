@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title popover
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      .container {
+          margin-top: 100px;
+      }
+  %body
+    .container
+      %button.btn.btn-danger.popoverButton{"data-content" => "Lorem Ipsum Donor.", "data-placement" => "bottom", "data-toggle" => "popover", :title => "This is a demo popover", :type => "button"}
+        Click Me!
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      $(document).ready(function () {
+          $('.popoverButton').popover();
+      });
+
+      <!--var options = {-->
+      <!--animation: true,-->
+      <!--placement: "right"-->
+      <!--};-->
+
+      <!--$('.popoverButton').popover(options);-->
+
+      <!--$('.popoverButton').popover("show");-->
+
+      $('.popoverButton').on('show.bs.popover', function () {
+          console.log("Opening popover..");
+      });
+
+      $('.popoverButton').on('shown.bs.popover', function () {
+          console.log("Popover opened.");
+      });
+
+      $('.popoverButton').on('hide.bs.popover', function () {
+          console.log("Hiding popover..");
+      });
+
+      $('.popoverButton').on('hidden.bs.popover', function () {
+          console.log("Popover hidden.");
+      });

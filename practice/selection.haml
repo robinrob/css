@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Selection
+    :css
+      h1::selection {
+        color: red;
+      }
+
+      h2::selection {
+        color: green;
+      }
+
+      h3::selection {
+        color: blue;
+      }
+
+
+  %body
+    %h1 Red when selected
+
+    %h2 Green when selected
+
+    %h3 Blue when selected

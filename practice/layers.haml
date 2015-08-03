@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Layers
+    :css
+
+      .layer1 {
+        background-color: red;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        z-index: 0;
+      }
+
+      .layer2 {
+        background-color: blue;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        z-index: 1;
+      }
+
+      .layer3 {
+        background-color: yellow;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+      }
+
+  %body
+    .layer1
+      .layer2
+        .layer3

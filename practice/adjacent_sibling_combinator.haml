@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %title Adjacent Sibling Combinator
+    :css
+      * {
+            border: 20px solid red;
+          }
+      	  div + p {
+            font-style: italic;
+      		}
+  %body
+    / Only the first 'sibling' is targeted!
+    %div
+      Div.
+    %p First paragraph (sibling)
+    %p Second paragraph (sibling)

@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title navbar
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#mynavbar-content", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "#"} SitePoint
+        #mynavbar-content.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"} Home
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                About
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Board of Members
+                %li
+                  %a{:href => "#"} Developers Team
+                %li
+                  %a{:href => "#"} Designing Team
+                %li.divider
+                %li
+                  %a{:href => "#"} Investors
+                %li
+                  %a{:href => "#"} Share holders
+            %li
+              %a{:href => "#"} Pricing
+            %li
+              %a{:href => "#"} Contact
+            %li
+              %a{:href => "#"} Feedback
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.js"}

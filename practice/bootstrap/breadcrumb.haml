@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title breadcrumb
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1
+          Breadcrumb
+          %small - Shows current page within site hierarchy
+      %ol.breadcrumb
+        %li
+          %a{:href => "#"} Home
+        %li
+          %a{:href => "#"} About
+        %li.active Author
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}

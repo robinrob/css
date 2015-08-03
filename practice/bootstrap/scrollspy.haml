@@ -1,0 +1,81 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title scrollspy
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      .scrollspy-example {
+          position: relative;
+          height: 200px;
+          margin-top: 10px;
+          overflow: auto
+      }
+
+      .width {
+          width: 450px;
+      }
+  %body
+    .container
+      %nav#navbarExample.navbar.navbar-default.width{:role => "navigation"}
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle{"data-target" => ".navbarLinks", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{:href => "#"} SitePoint
+          .collapse.navbar-collapse.navbarLinks
+            %ul.nav.navbar-nav
+              %li.active
+                %a{:href => "#home"} Home
+              %li
+                %a{:href => "#about"} About
+              %li
+                %a{:href => "#contact"} Contact Us
+              %li
+                %a{:href => "#map"} Map
+      .scrollspy-example.width{"data-offset" => "0", "data-spy" => "scroll", "data-target" => "#navbarExample"}
+        %h4#Home Home
+        %p
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+        %h4#about About
+        %p
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+        %h4#contact Contact Us
+        %p
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+        %h4#map Map
+        %p
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+          All scroll and no stop makes Robin a very interesting boy.
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      $('.scrollspy-example').scrollspy({ target: '#navbarExample' });
+
+      $('.scrollspy-example').scrollspy("refresh");
+
+      $('#navbarExample').on('activate.bs.scrollspy', function () {
+          console.log("New link highlighted!");
+      });

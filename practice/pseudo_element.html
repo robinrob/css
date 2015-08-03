@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <title>Pseudo-Class</title>
+    <style>
+      .container:before {
+        content: "";
+        display: block;
+        width: 800px;
+        height: 600px;
+        background: url(images/eros.jpg) no-repeat;
+        background-color: black;
+      }
+    </style>
+    <script>
+      function submitted(e) {
+        alert(e.textfield.value)
+      }
+    </script>
+  </head>
+  <body>
+    <div class='container'>Container</div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>dropdown</title>
+    <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='dropdown' id='myDropdown'>
+        <a class='myDropdown' data-target='#' data-toggle='dropdown' href='#'>
+          Dropdown
+          <span class='caret'></span>
+        </a>
+        <ul class='dropdown-menu'>
+          <li>
+            <a href='#'>Link 1</a>
+          </li>
+          <li>
+            <a href='#'>Link 2</a>
+          </li>
+          <li>
+            <a href='#'>Link 3</a>
+          </li>
+          <li>
+            <a href='#'>Link 4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script>
+      $(document).ready(function(){
+      
+          $('.myDropdown').dropdown('toggle');
+      
+          $('#myDropdown').on('show.bs.dropdown', function () {
+              console.log("Opening dropdown..");
+          });
+      
+          $('#myDropdown').on('shown.bs.dropdown', function () {
+              console.log("Dropdown opened..");
+          });
+      
+          $('#myDropdown').on('hide.bs.dropdown', function () {
+              console.log("Hiding dropdown..");
+          });
+      
+          $('#myDropdown').on('hidden.bs.dropdown', function () {
+              console.log("Dropdown hidden..");
+          });
+      
+      });
+    </script>
+  </body>
+</html>

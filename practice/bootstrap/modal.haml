@@ -1,0 +1,57 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title modal
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    :css
+
+  %body
+    .container
+      .page-header
+        %h1 modal
+      #myModal.modal.fade
+        / modal-sm or modal-lg can be used here
+        .modal-dialog
+          .modal-content
+            / Modal Header
+            .modal-header
+              %button.close{"data-dismiss" => "modal", :type => "button"} ×
+              %h4.modal-title Welcome Back!
+            / Modal Body
+            .modal-body
+              %h1 Hello Readers!
+            / Modal Footer
+            .modal-footer
+              %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-primary{:type => "button"} Save changes
+      %button.btn.btn-primary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal"}
+        Launch modal
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.js"}
+    :javascript
+      var options = {
+          backdrop: true,
+          keyboard: false, // This prevents using 'Esc' to close modal
+          show: true, // Sets to visible
+          remote: false //
+      }
+
+      $("#myModal").modal(options);
+
+      $('#myModal').on('show.bs.modal', function () {
+          console.log("Opening Modal..");
+      });
+
+      $('#myModal').on('shown.bs.modal', function () {
+          console.log("Modal opened.");
+      });
+
+      $('#myModal').on('hide.bs.modal', function () {
+          console.log("Hiding Modal..");
+      });
+
+      $('#myModal').on('hidden.bs.modal', function () {
+          console.log("Modal hidden.");
+      });
