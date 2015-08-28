@@ -73,3 +73,6 @@
 [submodule "javascript"]
 	path = javascript
 	url = git@github.com:robinrob/javascript.git
+[submodule "node"]
+	path = node
+	url = git@github.com:robinrob/node.git
